@@ -4,8 +4,8 @@
       <h1 class="title">Dashbaord</h1>
       <div class="user-details">
         <h2>
-          <span>{{ currentUser.firstname }} </span>
-          <span>{{ currentUser.lastname }}</span>
+          <span>{{ currentUser.firstName }} </span>
+          <span>{{ currentUser.lastName }}</span>
         </h2>
       </div>
     </div>
@@ -13,12 +13,15 @@
     <div class="product flex flex-justify">
       <div>
         <h2>Your total Investments</h2>
-        <h3 class="value">£132,829.34</h3>
+        <h3 class="value">£{{ currentUser.valuation }}</h3>
         <p>as of 12th November, 2019</p>
+        <p>
+          Acc. no: <b>{{ currentUser.productId }}</b>
+        </p>
       </div>
       <div class="allocation flex flex-start">
         <img src="../../assets/pie.png" />
-        <p>TPU Demo Scheme <span>100%</span></p>
+        <p>{{ currentUser.productName }}<span> 100%</span></p>
       </div>
     </div>
   </section>

@@ -16,6 +16,8 @@ export class DashboardComponent {
   }
 
   getUser() {
-    this.service.getUserDetails().subscribe(user => (this.currentUser = user));
+    this.service.getUserDetails().subscribe(user => {
+      this.currentUser = user;
+    });
   }
 }

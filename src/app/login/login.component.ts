@@ -46,9 +46,9 @@ export class LoginComponent {
       res => {
         if (res.status === "SUCCESS") {
           this.userProfile = { ...res.user.profile };
+          this.saveUser(this.userProfile);
           this.signIn.loginRedirect("/dashboard", {
-            sessionToken: res.session.token,
-            user: this.userProfile
+            sessionToken: res.session.token
           });
 
           // Hide the widget
@@ -59,5 +59,10 @@ export class LoginComponent {
         throw err;
       }
     );
+  }
+  saveUser(user) {
+    if (window.localStorage) {
+      localStorage.setItem("login-id", user.login);
+    }
   }
 }

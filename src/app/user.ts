@@ -1,5 +1,9 @@
 export interface User {
-  firstname: string;
-  lastname: string;
+  id: number;
+  firstName: string;
+  lastName: string;
   dob: string;
+  valuation: string;
+  productId: string;
+  productName: string;
 }
