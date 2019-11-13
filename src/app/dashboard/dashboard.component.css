@@ -1,0 +1,40 @@
+
+.content{
+    position: relative;
+    top: 200px;
+    margin: auto;
+    width: 80%;
+    color: #666366;
+}
+.header h1{
+    color: #fff;
+    font-size: 2.5rem;
+    margin: 0 0 1rem 0;
+}
+.header h2{
+    color: #fff;
+}
+.content .product{
+    background-color: #fff;
+    padding: 20px;
+    height: 150px;
+    opacity: .8;
+}
+.product .value{
+    font-size: 2rem;
+    margin: 1rem 0;
+    color:#000;
+}
+.product .allocation{
+    width: 400px;
+}
+.allocation img{
+    height: 100%;
+    margin-right: 2rem;
+}
+
+.allocation p{
+    padding: 2px 0;
+    margin: 2rem 0;
+    border-bottom: solid 1px #666366;
+}

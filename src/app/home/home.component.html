@@ -1,17 +1,15 @@
-<!-- src/app/app.component.html -->
+<div class="home">
+  <img src="../../assets/homepage.png" alt="homepage" />
+</div>
 
 <div class="navigation">
-  <!-- <button class="button button-primary" routerLink="/">Home</button>
-  <button class="button button-primary" routerLink="/dashboard">
-    Dashboard
-  </button> -->
-  <!-- <button
+  <button
     class="button button-primary login"
     *ngIf="!isAuthenticated"
     routerLink="/login"
   >
     Login
-  </button> -->
+  </button>
   <button
     class="button button-primary logout"
     *ngIf="isAuthenticated"
@@ -20,5 +18,3 @@
     Logout
   </button>
 </div>
-
-<router-outlet></router-outlet>
