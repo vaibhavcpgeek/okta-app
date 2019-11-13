@@ -14,7 +14,7 @@ export class LoginComponent {
     baseUrl: "https://publicissapientswaroop.okta.com",
     logo: "https://okta-demo-74648.s3.eu-west-2.amazonaws.com/logo.png",
     authParams: {
-      pkce: true
+      pkce: false
     }
   });
   userProfile;
