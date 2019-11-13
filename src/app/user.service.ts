@@ -7,7 +7,7 @@ import { Observable } from "rxjs";
   providedIn: "root"
 })
 export class UserService {
-  private api = `http://localhost:8091/customer?${this.getLoginId()}`; // URL to web api
+  private api = `http://3.11.6.45:8091/customer?${this.getLoginId()}`; // URL to web api
   constructor(private http: HttpClient) {}
 
   getUserDetails(): Observable<User> {
