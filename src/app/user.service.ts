@@ -1,19 +1,16 @@
 import { Injectable } from "@angular/core";
+import { HttpClient } from "@angular/common/http";
 import { User } from "./user";
 import { Observable, of } from "rxjs";
 
-const user: User = {
-  firstname: "Jhon",
-  lastname: "Paul",
-  dob: "23/04/1985"
-};
 @Injectable({
   providedIn: "root"
 })
 export class UserService {
-  constructor() {}
+  private api = "localhost://4200"; // URL to web api
+  constructor(private http: HttpClient) {}
 
   getUserDetails(): Observable<User> {
-    return of(user);
+    return this.http.get<User>(this.api);
   }
 }
