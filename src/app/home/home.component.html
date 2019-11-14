@@ -3,18 +3,10 @@
 </div>
 
 <div class="navigation">
-  <button
-    class="button button-primary login"
-    *ngIf="!isAuthenticated"
-    routerLink="/login"
-  >
+  <button class="button login" *ngIf="!isAuthenticated" routerLink="/login">
     Login
   </button>
-  <button
-    class="button button-primary logout"
-    *ngIf="isAuthenticated"
-    (click)="logout()"
-  >
+  <button class="button logout" *ngIf="isAuthenticated" (click)="logout()">
     Logout
   </button>
 </div>

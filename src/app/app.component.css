@@ -1,26 +1,11 @@
-.navigation{
-    position: absolute;
-    top: 10px;
-    right: 120px;
-    z-index: 1;
-}
-
-.button{
-    display: inline-block;
-    height: 40px;
-    line-height: 36px;
-    padding: 0 15px;
-    border: 1px solid;
-    border-radius: 3px;
-    font-size: 13px;
-    box-sizing: border-box;
-    -webkit-appearance: none;
-    margin-right: 10px;
-    cursor: pointer;
+.navigation {
+  position: absolute;
+  top: 10px;
+  right: 120px;
+  z-index: 1;
 }
 .login,
-.logout{
-    width: 100px;
-    font-size: 16px;
-    color: #6d6d6d;
+.logout {
+  width: 100px;
+  font-size: 16px;
 }

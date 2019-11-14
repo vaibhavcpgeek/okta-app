@@ -22,11 +22,7 @@ const appRoutes: Routes = [
   },
   {
     path: "dashboard",
-    component: DashboardComponent,
-    canActivate: [OktaAuthGuard],
-    data: {
-      onAuthRequired
-    }
+    component: DashboardComponent
   },
   {
     path: "home",

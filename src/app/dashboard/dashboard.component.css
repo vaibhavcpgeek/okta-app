@@ -1,38 +1,83 @@
-.content{
-    position: relative;
-    top: 200px;
-    margin: auto;
-    width: 80%;
-    color: #666366;
+.content {
+  margin: auto;
+  color: #666366;
+  box-shadow: 1px 2px 4px #ccc;
 }
-.header h1{
-    color: #fff;
-    font-size: 2.5rem;
-    margin: 0 0 1rem 0;
+.header h1 {
+  color: #fff;
+  font-size: 2.5rem;
+  margin: 0 0 1rem 0;
 }
-.header h2{
-    color: #fff;
+.header h2 {
+  color: #fff;
 }
-.content .product{
-    background-color: #fff;
-    padding: 20px;
-    opacity: .8;
+.content .product {
+  background-color: #fff;
+  padding: 20px;
+  min-height: 80px;
 }
-.product .value{
-    font-size: 2rem;
-    margin: 1rem 0;
-    color:#000;
+.product .value {
+  font-size: 2rem;
+  color: #000;
 }
-.product .allocation{
-    width: 400px;
+.product .allocation {
+  height: 100%;
 }
-.allocation img{
-    height: 100%;
-    margin-right: 2rem;
+.allocation img {
+  height: 100%;
+  margin-right: 2rem;
 }
 
-.allocation p{
-    padding: 2px 0;
-    margin: 2rem 0;
-    border-bottom: solid 1px #666366;
+.allocation p {
+  padding: 2px 0;
+  margin: 2rem 0;
+  border-bottom: solid 1px #666366;
+}
+.navbar {
+  background: #0072ba;
+  min-height: 250px;
+}
+.nav {
+  width: 90%;
+  margin: auto;
+  background: #fff;
+  padding: 10px;
+}
+.logo {
+  position: static;
+  height: 60px;
+}
+.dashboard {
+  width: 90%;
+  position: relative;
+  z-index: 100;
+  margin: auto;
+  color: #666366;
+  bottom: 100px;
+}
+.disclaimer {
+  margin: 0 auto;
+  width: 35%;
+  color: #666366;
+  margin-bottom: 40px;
+  margin-top: -40px;
+  text-align: center;
+}
+.manage-dashboard {
+  position: static;
+  border-left: solid 3px purple;
+  border-top: solid 1px #ccc;
+}
+
+.schemeName {
+  color: #36578c;
+  font-size: 1.5rem;
+  margin: 0;
+}
+.asset {
+  margin-right: 1rem;
+}
+.account {
+  padding: 0.5rem;
+  border-top: 1px solid #ccc;
 }

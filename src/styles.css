@@ -1,41 +1,59 @@
 /* You can add global styles to this file, and also import other style files */
-body{
-    padding: 0;
-    margin: 0;
-    font-family: "Avenir LT W01 35 Light","Helvetica Neue",Helvetica,Arial,sans-serif;
+@import "./normalize.css";
+@import "./helper.css";
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Avenir LT W01 35 Light", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
 }
-.flex{
-    display: flex;
+h1,
+h2,
+h3 {
+  font-weight: 500;
+  color: #666366;
+}
+.bg {
+  position: fixed;
+  top: 0;
+}
+.bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.logo {
+  position: absolute;
+  left: 40px;
+  top: 20px;
+  height: 75px;
+  z-index: 100;
+}
+.logo img {
+  height: 100%;
+}
+.button {
+  display: inline-block;
+  height: 40px;
+  line-height: 36px;
+  padding: 0 15px;
+  border: 1px solid;
+  border-radius: 3px;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.button-primary {
+  color: #fff;
+  background-color: #36578c;
+  border-color: #36578c;
 }
 
-.flex-justify{
-   justify-content: space-between;
-} 
-.flex-start {
-    align-items: flex-start;
-  }
-
-h1, h2, h3{
-    font-weight: 500;
-    line-height: 1.1em;
-    color: #666366;
-}
-.bg{
-    position: fixed;
-    top:0;
-}
-.bg img{
-    width:100%; 
-    height:100%;
-    object-fit: cover;
-}
-.logo{
-    position: absolute;
-    left: 40px;
-    top: 20px;
-    height: 75px;
-    z-index: 100;
-}
-.logo img{
-    height: 100%;
+.page-wrapper {
+  max-width: 90rem;
+  margin: 0 auto;
+  position: relative;
+  background: #fff;
+  padding-bottom: 5rem;
 }

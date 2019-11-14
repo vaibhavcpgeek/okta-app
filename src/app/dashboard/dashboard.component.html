@@ -1,5 +1,12 @@
-<div class="dashboard">
-  <section class="content">
+<div class="page-wrapper">
+  <div class="navbar">
+    <div class="nav">
+      <div class="logo">
+        <img src="../../assets/logo.png" />
+      </div>
+    </div>
+  </div>
+  <div class="dashboard">
     <div class="header flex flex-justify">
       <h1 class="title">Dashbaord</h1>
       <div class="user-details">
@@ -9,25 +16,50 @@
         </h2>
       </div>
     </div>
-
-    <div class="product flex flex-justify">
+    <section class="content">
+      <div class="product flex flex-justify">
+        <ng-container *ngIf="currentUser">
+          <div>
+            <h3>Your total Investments</h3>
+            <h3 class="value">£{{ currentUser.valuation }}</h3>
+            <p>{{ today | date }}</p>
+          </div>
+          <div class="allocation flex flex-start">
+            <img src="../../assets/pie.png" />
+            <p>{{ currentUser.productName }}<span> 100%</span></p>
+          </div>
+        </ng-container>
+      </div>
+    </section>
+  </div>
+  <div class="disclaimer">
+    <p>
+      Investments are not guaranteed. The value of the investments may go down
+      as well up and you may get less on the investment than you originally
+      invest.
+    </p>
+  </div>
+  <div class="dashboard manage-dashboard">
+    <section class="content">
       <ng-container *ngIf="currentUser">
-        <div>
-          <h2>Your total Investments</h2>
-          <h3 class="value">£{{ currentUser.valuation }}</h3>
-          <p>{{ today | date }}</p>
-          <p>
-            Acc. no: <b>{{ currentUser.productId }}</b>
-          </p>
+        <div class="product flex flex-justify">
+          <div class="flex flex-start">
+            <div class="asset"><img src="../../assets/asset.png" /></div>
+            <div>
+              <p class="schemeName">
+                {{ currentUser.productName }}
+              </p>
+              <h3 class="value">£{{ currentUser.valuation }}</h3>
+            </div>
+          </div>
+          <div>
+            <button class="button button-primary">View and manage</button>
+          </div>
         </div>
-        <div class="allocation flex flex-start">
-          <img src="../../assets/pie.png" />
-          <p>{{ currentUser.productName }}<span> 100%</span></p>
-        </div>
+        <p class="account">
+          Account number: <b>{{ currentUser.productId }}</b>
+        </p>
       </ng-container>
-    </div>
-  </section>
-</div>
-<div class="logo">
-  <img src="../../assets/logo.png" />
+    </section>
+  </div>
 </div>
