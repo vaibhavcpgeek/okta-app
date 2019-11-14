@@ -8,6 +8,7 @@ import { Component } from "@angular/core";
 })
 export class DashboardComponent {
   currentUser;
+  today: number = Date.now();
 
   constructor(private service: UserService) {}
 

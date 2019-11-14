@@ -4,28 +4,30 @@
       <h1 class="title">Dashbaord</h1>
       <div class="user-details">
         <h2>
-          <span>{{ currentUser.firstName }} </span>
-          <span>{{ currentUser.lastName }}</span>
+          <span>{{ currentUser?.firstName }} </span>
+          <span>{{ currentUser?.lastName }}</span>
         </h2>
       </div>
     </div>
 
     <div class="product flex flex-justify">
-      <div>
-        <h2>Your total Investments</h2>
-        <h3 class="value">£{{ currentUser.valuation }}</h3>
-        <p>as of 12th November, 2019</p>
-        <p>
-          Acc. no: <b>{{ currentUser.productId }}</b>
-        </p>
-      </div>
-      <div class="allocation flex flex-start">
-        <img src="../../assets/pie.png" />
-        <p>{{ currentUser.productName }}<span> 100%</span></p>
-      </div>
+      <ng-container *ngIf="currentUser">
+        <div>
+          <h2>Your total Investments</h2>
+          <h3 class="value">£{{ currentUser.valuation }}</h3>
+          <p>{{ today | date }}</p>
+          <p>
+            Acc. no: <b>{{ currentUser.productId }}</b>
+          </p>
+        </div>
+        <div class="allocation flex flex-start">
+          <img src="../../assets/pie.png" />
+          <p>{{ currentUser.productName }}<span> 100%</span></p>
+        </div>
+      </ng-container>
     </div>
   </section>
 </div>
 <div class="logo">
-  <img src="https://okta-demo-74648.s3.eu-west-2.amazonaws.com/logo.png" />
+  <img src="../../assets/logo.png" />
 </div>

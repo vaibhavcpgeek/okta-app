@@ -3,6 +3,7 @@ export interface User {
   firstName: string;
   lastName: string;
   dob: string;
+  emailId: string;
   valuation: string;
   productId: string;
   productName: string;

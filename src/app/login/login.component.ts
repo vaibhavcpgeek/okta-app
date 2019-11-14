@@ -11,8 +11,8 @@ import * as OktaSignIn from "@okta/okta-signin-widget";
 export class LoginComponent {
   signIn;
   widget = new OktaSignIn({
-    baseUrl: "https://publicissapientswaroop.okta.com",
-    logo: "https://okta-demo-74648.s3.eu-west-2.amazonaws.com/logo.png",
+    baseUrl: "https://publicissapient-online.okta.com/",
+    logo: "../../assets/logo.png",
     authParams: {
       pkce: false
     }
