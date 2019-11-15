@@ -1,6 +1,5 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
-
 import { OktaCallbackComponent, OktaAuthGuard } from "@okta/okta-angular";
 import { DashboardComponent } from "./dashboard/dashboard.component";
 import { LoginComponent } from "./login/login.component";
@@ -22,7 +21,11 @@ const appRoutes: Routes = [
   },
   {
     path: "dashboard",
-    component: DashboardComponent
+    component: DashboardComponent,
+    canActivate: [OktaAuthGuard],
+    data: {
+      onAuthRequired
+    }
   },
   {
     path: "home",
