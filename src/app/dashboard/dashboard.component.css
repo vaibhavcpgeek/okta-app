@@ -68,7 +68,9 @@
   border-left: solid 3px purple;
   border-top: solid 1px #ccc;
 }
-
+.manage-dashboard .product {
+  min-height: 80px;
+}
 .schemeName {
   color: #36578c;
   font-size: 1.5rem;
@@ -80,4 +82,14 @@
 .account {
   padding: 0.5rem;
   border-top: 1px solid #ccc;
+}
+.button {
+  cursor: default;
+}
+.nav-links {
+  margin-right: 11rem;
+  color: #828082;
+}
+.nav-links li {
+  margin: 0 1rem;
 }
