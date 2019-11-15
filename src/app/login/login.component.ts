@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { Router, NavigationStart } from "@angular/router";
 import { OktaAuthService } from "@okta/okta-angular";
+import config from "../app.config";
 import * as OktaSignIn from "@okta/okta-signin-widget";
 
 @Component({
@@ -11,10 +12,10 @@ import * as OktaSignIn from "@okta/okta-signin-widget";
 export class LoginComponent {
   signIn;
   widget = new OktaSignIn({
-    baseUrl: "https://publicissapient-online.okta.com/",
+    baseUrl: config.issuer,
     logo: "../../assets/logo.png",
     authParams: {
-      pkce: false
+      pkce: config.pkce
     }
   });
   userProfile;
