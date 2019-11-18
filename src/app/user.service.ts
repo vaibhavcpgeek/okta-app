@@ -1,13 +1,14 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { User } from "./user";
+import config from "./app.config";
 import { Observable } from "rxjs";
 
 @Injectable({
   providedIn: "root"
 })
 export class UserService {
-  private api = `http://3.11.6.45:8091/customer?emailId=${this.getLoginId()}`; // URL to web api
+  private api = `${config.serviceUri}?emailId=${this.getLoginId()}`; // URL to web api
   constructor(private http: HttpClient) {}
 
   getUserDetails(): Observable<User> {
