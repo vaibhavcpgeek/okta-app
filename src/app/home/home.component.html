@@ -13,6 +13,13 @@
           >
             Login
           </button>
+          <button
+            class="button logout"
+            *ngIf="isAuthenticated"
+            (click)="logout()"
+          >
+            Logout
+          </button>
         </div>
       </div>
       <ul class="nav-bottom-row">
