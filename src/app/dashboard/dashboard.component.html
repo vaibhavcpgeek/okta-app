@@ -43,7 +43,7 @@
             <p>{{ currentUser.productName }}<span> 100%</span></p>
           </div>
         </ng-container>
-        <div class="no-data" *ngIf="!currentUser">
+        <div class="no-data" *ngIf="showNoData">
           <h2>Your account is undergoing maintenance.</h2>
           <h3>
             We applogize for any inconvenience and we will available back soon.

@@ -12,6 +12,7 @@ export class DashboardComponent {
   currentUser;
   today: number = Date.now();
   isAuthenticated;
+  showNoData = false;
 
   constructor(
     private service: UserService,
@@ -25,9 +26,14 @@ export class DashboardComponent {
   }
 
   getUser() {
-    this.service.getUserDetails().subscribe(user => {
-      this.currentUser = user;
-    });
+    this.service.getUserDetails().subscribe(
+      user => {
+        this.currentUser = user;
+      },
+      err => {
+        this.showNoData = true;
+      }
+    );
   }
   async logout() {
     // Terminates the session with Okta and removes current tokens.
