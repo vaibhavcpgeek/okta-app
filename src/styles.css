@@ -16,6 +16,7 @@ h3 {
 .bg {
   position: fixed;
   top: 0;
+  height: 100%;
 }
 .bg img {
   width: 100%;

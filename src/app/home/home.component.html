@@ -1,12 +1,78 @@
-<div class="home">
-  <img src="../../assets/homepage.png" alt="homepage" />
-</div>
+<div class="wrapper">
+  <div class="header-banner">
+    <div class="navbar">
+      <div class="nav flex">
+        <div class="logo">
+          <img src="../../assets/logo.png" />
+        </div>
+        <div class="navigation">
+          <button
+            class="button login"
+            *ngIf="!isAuthenticated"
+            routerLink="/login"
+          >
+            Login
+          </button>
+          <button
+            class="button logout"
+            *ngIf="isAuthenticated"
+            (click)="logout()"
+          >
+            Logout
+          </button>
+        </div>
+      </div>
+      <ul class="nav-bottom-row">
+        <li>
+          <a class="link-section-1" href="/personal.html" title="Personal"
+            >Personal</a
+          >
+        </li>
+        <li>
+          <a class="link-section-2" href="/workplace.html" title="Workplace"
+            >Workplace</a
+          >
+        </li>
+        <li>
+          <a class="link-section-3" href="/advisers.html" title="Advisers"
+            >Advisers</a
+          >
+        </li>
+        <li>
+          <a
+            class="link-section-6"
+            href="/about-aegon/investments.html"
+            title="Investments"
+            >Investments</a
+          >
+        </li>
+        <li>
+          <a class="link-section-4" href="/about-aegon.html" title="About Aegon"
+            >About Aegon</a
+          >
+        </li>
+      </ul>
+    </div>
+    <div class="banner">
+      <img src="../../assets/banner.jpg" class="object-cover-fit" />
+    </div>
 
-<div class="navigation">
-  <button class="button login" *ngIf="!isAuthenticated" routerLink="/login">
-    Login
-  </button>
-  <button class="button logout" *ngIf="isAuthenticated" (click)="logout()">
-    Logout
-  </button>
+    <div class="panel-body">
+      <h2 class="h3-style">About Aegon</h2>
+      <p class="mb1">
+        Aegon is one of the world's leading providers of life insurance,
+        pensions and asset management. We started life as Scottish Equitable in
+        1831.
+      </p>
+      <a
+        href="/about-aegon.html"
+        target="_self"
+        role="button"
+        class="btn btn-primary btn-lg icon-right"
+      >
+        Find out more <span class="sr-only"> (about Aegon UK)</span>
+        <span class="icon icon-arrow-right"></span>
+      </a>
+    </div>
+  </div>
 </div>

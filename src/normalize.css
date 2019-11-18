@@ -73,8 +73,10 @@ pre {
    * Remove the gray background on active links in IE 10.
    */
 
-a {
+a,
+a:hover {
   background-color: transparent;
+  text-decoration: none;
 }
 
 /**
@@ -363,10 +365,17 @@ h6,
 .h5,
 .h6 {
   margin: 0 0 1rem;
+  font-family: "Avenir LT W01 35 Light", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+  font-weight: 500;
+  line-height: 1.1em;
+  color: #666366;
 }
 p {
   margin: 0;
 }
 ul {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
