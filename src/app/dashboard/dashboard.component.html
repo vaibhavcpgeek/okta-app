@@ -1,6 +1,6 @@
 <div class="page-wrapper">
   <div class="navbar">
-    <div class="nav flex flex-justify">
+    <div class="nav flex">
       <div class="logo">
         <img src="../../assets/logo.png" />
       </div>
@@ -11,6 +11,13 @@
           <li>Profile</li>
         </ul>
       </div>
+      <button
+        class="button button-primary logout"
+        *ngIf="isAuthenticated"
+        (click)="logout()"
+      >
+        Logout
+      </button>
     </div>
   </div>
   <div class="dashboard">

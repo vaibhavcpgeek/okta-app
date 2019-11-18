@@ -89,6 +89,9 @@
 .nav-links {
   margin-right: 11rem;
   color: #828082;
+  position: absolute;
+  right: 100px;
+  top: 20px;
 }
 .nav-links li {
   margin: 0 1rem;
