@@ -142,6 +142,10 @@
 .icon-arrow-right:before {
   content: "";
 }
+.alert-info {
+  margin: 2rem auto auto;
+  width: 80%;
+}
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
 }

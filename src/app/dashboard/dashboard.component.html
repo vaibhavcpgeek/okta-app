@@ -43,6 +43,16 @@
             <p>{{ currentUser.productName }}<span> 100%</span></p>
           </div>
         </ng-container>
+        <div class="no-data" *ngIf="!currentUser">
+          <h2>Your account is undergoing maintenance.</h2>
+          <h3>
+            We applogize for any inconvenience and we will available back soon.
+          </h3>
+          <p>
+            You can contact support at
+            <a mailto="support@aegon.com">support@aegon.com</a>
+          </p>
+        </div>
       </div>
     </section>
   </div>
