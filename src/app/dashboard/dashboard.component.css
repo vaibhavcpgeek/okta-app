@@ -66,16 +66,37 @@
 }
 .manage-dashboard {
   position: static;
-  border-left: solid 3px purple;
   border-top: solid 1px #ccc;
+  margin-bottom: 2rem;
+  border-left: solid 6px;
 }
+
+.manage-dashboard.tp {
+  border-left-color: purple;
+}
+
+hr {
+  border-bottom: solid 1px #ddd;
+  width: 90%;
+  margin: auto;
+  margin-bottom: 2rem;
+}
+
+.manage-dashboard.gip {
+  border-left-color: #7abcc8;
+}
+
+.manage-dashboard.cpa {
+  border-left-color: #0ab9eb;
+}
+
 .manage-dashboard .product {
   min-height: 80px;
 }
 .schemeName {
   color: #36578c;
   font-size: 1.5rem;
-  margin: 0;
+  margin-bottom: 1rem;
 }
 .asset {
   margin-right: 1rem;
@@ -109,4 +130,36 @@
 }
 .no-data h2 {
   color: #000;
+}
+
+/* Mobile devices (landscape tablets, 768px and up) */
+
+@media only screen and (max-width: 480px) {
+  .nav-links {
+    display: none;
+  }
+  .logo {
+    position: static;
+    height: 50px;
+  }
+  .dashboard .title {
+    font-size: 2rem;
+  }
+  .dashboard .name {
+    font-size: 1.5rem;
+    line-height: normal;
+  }
+  .content .product {
+    display: block;
+  }
+  .allocation {
+    margin-top: 2rem;
+  }
+  .edit-detail {
+    text-align: center;
+    margin-top: 1rem;
+  }
+  .edit-detail .button {
+    width: 100%;
+  }
 }

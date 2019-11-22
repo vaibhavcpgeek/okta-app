@@ -23,12 +23,10 @@
   <div class="dashboard">
     <div class="header flex flex-justify">
       <h1 class="title">Dashboard</h1>
-      <div class="user-details">
-        <h2>
-          <span>{{ currentUser?.firstName }} </span>
-          <span>{{ currentUser?.lastName }}</span>
-        </h2>
-      </div>
+      <h2 class="name">
+        <span>{{ currentUser?.firstName }} </span>
+        <span>{{ currentUser?.lastName }}</span>
+      </h2>
     </div>
     <section class="content">
       <div class="product flex flex-justify">
@@ -36,7 +34,7 @@
           <div>
             <h3>Your total Investments</h3>
             <h3 class="value">£{{ currentUser.valuation }}</h3>
-            <p>{{ today | date }}</p>
+            <p>as of {{ today | date }}</p>
           </div>
           <div class="allocation flex flex-start">
             <img src="../../assets/pie.png" />
@@ -56,14 +54,7 @@
       </div>
     </section>
   </div>
-  <div class="disclaimer">
-    <p>
-      Investments are not guaranteed. The value of the investments may go down
-      as well up and you may get less on the investment than you originally
-      invest.
-    </p>
-  </div>
-  <div class="dashboard manage-dashboard">
+  <div class="dashboard manage-dashboard tp">
     <section class="content">
       <ng-container *ngIf="currentUser">
         <div class="product flex flex-justify">
@@ -71,12 +62,67 @@
             <div class="asset"><img src="../../assets/asset.png" /></div>
             <div>
               <p class="schemeName">
-                {{ currentUser.productName }}
+                Target plan workplace pension
               </p>
-              <h3 class="value">£{{ currentUser.valuation }}</h3>
+              <!-- <h3 class="value">£{{ currentUser.valuation }}</h3> -->
+              <h3 class="value">£70,450</h3>
             </div>
           </div>
-          <div>
+          <div class="edit-detail">
+            <button disabled class="button button-primary">
+              View and manage
+            </button>
+          </div>
+        </div>
+        <p class="account">
+          Account number: <b>{{ currentUser.productId }}</b>
+        </p>
+      </ng-container>
+    </section>
+  </div>
+  <hr />
+  <div class="dashboard manage-dashboard gip">
+    <section class="content">
+      <ng-container *ngIf="currentUser">
+        <div class="product flex flex-justify">
+          <div class="flex flex-start">
+            <div class="asset"><img src="../../assets/asset.png" /></div>
+            <div>
+              <p class="schemeName">
+                General pension account
+              </p>
+              <!-- <h3 class="value">£{{ currentUser.valuation }}</h3> -->
+              <h3 class="value">£40,100</h3>
+            </div>
+          </div>
+          <div class="edit-detail">
+            <button disabled class="button button-primary">
+              View and manage
+            </button>
+          </div>
+        </div>
+        <p class="account">
+          Account number: <b>{{ currentUser.productId }}</b>
+        </p>
+      </ng-container>
+    </section>
+  </div>
+  <hr />
+  <div class="dashboard manage-dashboard cpa">
+    <section class="content">
+      <ng-container *ngIf="currentUser">
+        <div class="product flex flex-justify">
+          <div class="flex flex-start">
+            <div class="asset"><img src="../../assets/asset.png" /></div>
+            <div>
+              <p class="schemeName">
+                Cofunds pension account
+              </p>
+              <!-- <h3 class="value">£{{ currentUser.valuation }}</h3> -->
+              <h3 class="value">£20,350</h3>
+            </div>
+          </div>
+          <div class="edit-detail">
             <button disabled class="button button-primary">
               View and manage
             </button>

@@ -48,7 +48,7 @@ export class LoginComponent {
         if (res.status === "SUCCESS") {
           this.userProfile = { ...res.user.profile };
           this.saveUser(this.userProfile);
-          this.signIn.loginRedirect("/dashboard", {
+          this.signIn.loginRedirect("/home", {
             sessionToken: res.session.token
           });
 
